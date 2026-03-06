@@ -282,6 +282,58 @@ nav a:hover::after {
     left: 0;
 }
 
+/* Private Pentesting Section */
+#private-pentesting {
+    background-color: #f0f8ff; /* Light blue background */
+    text-align: center;
+}
+
+#private-pentesting h2 {
+    color: var(--primary-color);
+}
+
+.pentesting-services {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-list {
+    list-style: none;
+    text-align: left;
+    margin: 20px auto;
+}
+
+.services-list li {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.services-list li i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.cta {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e8f4fc;
+    border-radius: 5px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.cta a {
+    margin: 0 5px;
+    color: var(--primary-color);
+}
+
 /* Bug Bounty Section */
 .bug-bounty-profiles {
     display: flex;
@@ -370,5 +422,10 @@ footer {
     .contact-info {
         flex-direction: column;
         align-items: center;
+    }
+
+    .services-list li {
+        flex-direction: column;
+        text-align: center;
     }
 }
