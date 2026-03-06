@@ -48,4 +48,31 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 100);
     }
+
+    // Add hover effects to the private pentesting services list
+    const serviceItems = document.querySelectorAll('.services-list li');
+    serviceItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02)';
+            this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.15)';
+            this.querySelector('i').style.color = '#e74c3c'; // Change icon color on hover
+        });
+
+        item.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+            this.querySelector('i').style.color = 'var(--secondary-color)'; // Revert icon color
+        });
+    });
+
+    // Add a subtle pulse effect to the CTA in the private pentesting section
+    const ctaElement = document.querySelector('.cta');
+    if (ctaElement) {
+        setInterval(() => {
+            ctaElement.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                ctaElement.style.transform = 'scale(1)';
+            }, 300);
+        }, 4000); // Pulse every 4 seconds
+    }
 });
